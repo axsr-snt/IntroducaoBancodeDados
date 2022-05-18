@@ -89,13 +89,19 @@ ORDER BY deptno DESC;   -- campos para ordenação
 INSERT INTO dept2 VALUES (50, 'BI', 'BOSTON');
 -- mas o time de BI está dividido entre BOSTON e TEXAS, portanto teremos mais um deptno
 INSERT INTO dept2 VALUES (60, 'BI', 'TEXAS');
--- poderiamos ter a seguinte pergunta:
--- quais os departamentos que temos cadastrados?
--- ou quais as localizações em que temos departamentos?
--- poderiamos responder esta pergunta da seguinte forma:
+/*
+Poderiamos ter a seguinte pergunta:
+ Quais os departamentos que temos cadastrados?
+ Quais as localizações em que temos departamentos?
+ Poderiamos responder esta pergunta da seguinte forma:
+*/
+
 SELECT dname FROM dept2;
+
 -- ou
+
 SELECT loc FROM dept2;
+
 -- dependendo da base, poderemos ter muitas linhas repetidas, para isso podemos
 -- utilizar o distinct, para retornar valores únicos:
 SELECT DISTINCT dname 
